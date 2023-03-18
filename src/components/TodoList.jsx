@@ -13,7 +13,6 @@ function TodoList() {
     const newTodos = [todo, ...todos];
 
     setTodos(newTodos);
-    console.log(todo, ...todos);
   };
 
   const updateTodo = (todoId, newValue) => {
