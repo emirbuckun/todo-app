@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { AiOutlineClear } from "react-icons/ai";
+import { GrFormAdd } from "react-icons/gr";
 
 function TodoForm(props) {
   const [input, setInput] = useState("");
@@ -20,6 +22,14 @@ function TodoForm(props) {
     setInput("");
   };
 
+  const handleClear = (e) => {
+    e.preventDefault();
+
+    props.clearTodo();
+
+    setInput("");
+  };
+
   return (
     <form className="todo-form" onSubmit={handleSubmit}>
       <input
@@ -31,7 +41,12 @@ function TodoForm(props) {
         onChange={(e) => setInput(e.target.value)}
         ref={inputRef}
       />
-      <button className="todo-button">Add todo</button>
+      <button className="add-button">
+        <GrFormAdd className="add-icon" />
+      </button>
+      <button className="clear-button" onClick={handleClear}>
+        <AiOutlineClear className="clear-icon" />
+      </button>
     </form>
   );
 }

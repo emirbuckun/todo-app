@@ -5,11 +5,11 @@ function TodoCount({ todos }) {
     <div className="todo-count">
       You have
       {!todos.length
-        ? " no tasks"
+        ? " no todos"
         : todos.length === 1
-        ? " 1 task"
+        ? " 1 todo"
         : todos.length > 1
-        ? ` ${todos.length} tasks`
+        ? ` ${todos.length} todos`
         : null}
     </div>
   );
