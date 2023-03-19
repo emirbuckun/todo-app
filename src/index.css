@@ -174,3 +174,16 @@ h1 {
     rgba(17, 122, 255, 1) 100%
   );
 }
+
+/* ================ MEDIA QUERIES (SMALL DEVICES) ================ */
+@media screen and (max-width: 600px) {
+  .todo-app {
+    width: auto;
+    margin: 64px 32px auto 32px;
+    min-height: 500px;
+  }
+
+  .todo-input {
+    width: auto;
+  }
+}
