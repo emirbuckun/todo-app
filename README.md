@@ -1,6 +1,6 @@
 # Todo App
 
-![image](https://user-images.githubusercontent.com/63044078/226159557-f1e4aa1a-10f1-49de-9e6c-0f95bb7a59c8.png)
+![image](https://user-images.githubusercontent.com/63044078/226160168-49f7de14-f089-4fc5-9b6b-2025cb5192ee.png)
 
 ## [See Website](https://emirbuckun.github.io/todo-app/)
 
