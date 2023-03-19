@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Todo from "./Todo";
+import TodoCount from "./TodoCount";
 import TodoForm from "./TodoForm";
 
 function TodoList() {
@@ -9,9 +10,7 @@ function TodoList() {
     if (!todo.text || /^\s*$/.test(todo.text)) {
       return;
     }
-
     const newTodos = [todo, ...todos];
-
     setTodos(newTodos);
   };
 
@@ -19,7 +18,6 @@ function TodoList() {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;
     }
-
     setTodos((prev) =>
       prev.map((item) => (item.id === todoId ? newValue : item))
     );
@@ -37,7 +35,6 @@ function TodoList() {
 
   const removeTodo = (id) => {
     const removeArr = [...todos].filter((todo) => todo.id !== id);
-
     setTodos(removeArr);
   };
 
@@ -45,16 +42,7 @@ function TodoList() {
     <div>
       <h1>What's the plan for today?</h1>
       <TodoForm onSubmit={addTodo} />
-      <div className="todo-count">
-        You have
-        {!todos.length
-          ? " no tasks"
-          : todos.length === 1
-          ? " 1 task"
-          : todos.length > 1
-          ? ` ${todos.length} tasks`
-          : null}
-      </div>
+      <TodoCount todos={todos} />
       <Todo
         todos={todos}
         completeTodo={completeTodo}
