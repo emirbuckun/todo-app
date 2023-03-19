@@ -60,6 +60,12 @@ h1 {
 }
 
 .todo-form {
+  margin-bottom: 12px;
+}
+
+.todo-count {
+  color: var(--color-white);
+  text-align: center;
   margin-bottom: 32px;
 }
 

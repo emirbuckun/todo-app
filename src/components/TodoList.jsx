@@ -45,6 +45,16 @@ function TodoList() {
     <div>
       <h1>What's the plan for today?</h1>
       <TodoForm onSubmit={addTodo} />
+      <div className="todo-count">
+        You have
+        {!todos.length
+          ? " no tasks"
+          : todos.length === 1
+          ? " 1 task"
+          : todos.length > 1
+          ? ` ${todos.length} tasks`
+          : null}
+      </div>
       <Todo
         todos={todos}
         completeTodo={completeTodo}
